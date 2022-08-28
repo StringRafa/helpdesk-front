@@ -145,6 +145,15 @@ export class TecnicoListComponent implements OnInit {
       senha: '123',
       perfis: ['0'],
       dataCriacao: '12/08/2022'
+    },
+    {
+      id: 16,
+      nome: 'Caique',
+      cpf: '12345678910',
+      email: 'caique@mail.com',
+      senha: '123',
+      perfis: ['0'],
+      dataCriacao: '12/08/2022'
     }
   ]
   
