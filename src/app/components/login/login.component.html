@@ -3,13 +3,13 @@
         <h1>Projeto Help Desk</h1>
         <img src="assets/img/login-image.svg" alt="Help Desk">
         <mat-form-field class="full-width" appearance="fill">
-          <mat-label>E-mail</mat-label>
-          <input matInput placeholder="Ex. seuemail@mail.com">
+            <mat-label>E-mail</mat-label>
+            <input [formControl]="email" required [(ngModel)]="creds.email" name="email" matInput placeholder="Ex. seuemail@mail.com">
         </mat-form-field>
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Ex. 123456">
-          </mat-form-field>
-          <button class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
+            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput placeholder="Ex. 123456">
+        </mat-form-field>
+          <button [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
       </form>  
 </div>
